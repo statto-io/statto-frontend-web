@@ -1,6 +1,6 @@
 {
-  "name": "statto-web",
-  "description": "A web frontent for displaying a statto-backend-*.",
+  "name": "statto-frontend-web",
+  "description": "A statto frontend for the web for displaying stats.",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
@@ -20,13 +20,13 @@
     "levelup": "^0.19.0",
     "tape": "^3.5.0"
   },
-  "homepage": "https://github.com/tynio/statto-web",
+  "homepage": "https://github.com/tynio/statto-frontend-web",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tynio/statto-web"
+    "url": "https://github.com/tynio/statto-frontend-web"
   },
   "bugs": {
-    "url": "https://github.com/tynio/statto-web/issues"
+    "url": "https://github.com/tynio/statto-frontend-web/issues"
   },
   "author": {
     "name": "Andrew Chilton",
