@@ -18,6 +18,8 @@
   "devDependencies": {
     "leveldown": "^0.10.4",
     "levelup": "^0.19.0",
+    "statto": "^0.3.0",
+    "statto-backend-leveldb": "^0.3.0",
     "tape": "^3.5.0"
   },
   "homepage": "https://github.com/tynio/statto-frontend-web",
