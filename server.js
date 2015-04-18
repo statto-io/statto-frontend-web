@@ -19,12 +19,22 @@ var backend = stattoBackendLevelDB(db)
 var stattoServer = statto(function(err, port) {
   console.log('Statto server is listening on port %s', port)
 })
-stattoServer.on('stats', function(stats) {
+stattoServer.on('stats', function(raw) {
   // log it first
-  console.log(stats)
+  console.log(raw)
 
   // now send to the backend
-  backend.stats(stats)
+  backend.addRaw(raw, function(err) {
+    if (err) return console.error('backend.addRaw(): err - ', err)
+    console.log('Raw stats added ok')
+
+    // Since we only have one backend here and we're storing everything
+    // locally, let's tell the backend to process these raw stats.
+    backend.process(raw.ts, function(err) {
+      if (err) return console.error('backend.process(): err - ', err)
+      console.log('Stats processed ok')
+    })
+  })
 })
 
 // create the app, the server and listen
