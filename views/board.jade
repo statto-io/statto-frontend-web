@@ -1,0 +1,21 @@
+extends layout.jade
+
+block content
+  h2 Board : (#{board.id}) - #{board.title}
+  for stat in board.stats
+    .row
+      .col-md-10
+        h2 MetroGraphics
+        h3 #{stat.name} - #{stat.title}
+        div(class="graph-#{stat.type}",
+          id="graph-#{stat.id}",
+          data-id=stat.id,
+          data-title=stat.title,
+          data-name=stat.name,
+          data-from=date.oneHourAgo(),
+          data-to=date.now())
+      .col-md-2
+        p None.
+
+block scripts
+  script(src="/s/js/board.js")

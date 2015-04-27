@@ -3,3 +3,26 @@ extends layout.jade
 block content
   p What stats do you want to see?
 
+  table
+    thead
+      tr
+        th Type
+        th Stat
+        th Past Hour
+        th Past Day
+        th Past Week
+        th Past Month
+    tbody
+      for stat in [ 'statto.packets.total', 'hit' ]
+        tr
+          td Counter
+          td= stat
+          td
+            a(href="/stats/c/#{stat}?from=#{date.oneHourAgo()}&to=#{date.now()}") View
+          td
+            a(href="/stats/c/#{stat}?from=#{date.oneDayAgo()}&to=#{date.now()}") View
+          td
+            a(href="/stats/c/#{stat}?to=from=#{date.oneWeekAgo()}&#{date.now()}") View
+          td
+            a(href="/stats/c/#{stat}?from=#{date.oneMonthAgo()}&to=#{date.now()}") View
+

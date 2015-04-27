@@ -5,14 +5,14 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible",content="IE=edge")
     meta(name="viewport",content="width=device-width, initial-scale=1")
     title statto - the stats you want to see
-    link(href="//cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css",rel="stylesheet")
-    link(href="/v/metrics-graphics-2.3.0/metricsgraphics.min.css",rel="stylesheet")
+    link(href="//cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.#{min}css",rel="stylesheet")
+    link(href="/s/v/metrics-graphics-2.4.0/metricsgraphics.#{min}css",rel="stylesheet")
 
   body
     h1 Statto Web
     block content
 
     script(src="//cdn.jsdelivr.net/d3js/3.5.5/d3.js")
-    script(src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js")
-    script(src="/v/metrics-graphics-2.3.0/metricsgraphics.min.js")
-    script(src="/s/js/view.js")
+    script(src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.#{min}js")
+    script(src="/s/v/metrics-graphics-2.4.0/metricsgraphics.#{min}js")
+    block scripts
